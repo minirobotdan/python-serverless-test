@@ -1,0 +1,15 @@
+org: minirobotdan
+app: python-athena
+service: python-athena
+
+provider:
+    name: aws
+    runtime: python3.7
+
+functions:
+    hello:
+        handler: handler.endpoint
+        events:
+        - http:
+            path: hello
+            method: get
