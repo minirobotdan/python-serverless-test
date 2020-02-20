@@ -31,6 +31,7 @@ Client (Browser, CURL, Postman, etc) --- HTTPS ---> API Gateway ---> Lambda --->
 ```
 
 ## Known issues, observations and TODOs
+- I haven't written any tests for this code, purely for time reasons.
 - Some string formatting issues with escape characters I need to resolve
 - Query string parameter mapping in API Gateway config was done by hand, and did not make it into the cloudformation scripts.
 - Some more verbose logging when capturing exceptions would make it more debuggable in the AWS Lambda interface.
