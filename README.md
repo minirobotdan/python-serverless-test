@@ -36,4 +36,4 @@ Client (Browser, CURL, Postman, etc) --- HTTPS ---> API Gateway ---> Lambda --->
 - Query string parameter mapping in API Gateway config was done by hand, and did not make it into the cloudformation scripts.
 - Some more verbose logging when capturing exceptions would make it more debuggable in the AWS Lambda interface.
 - Athena/PrestoDB support for Geospatial queries is fairly comprehensive, but I think I prefer MongoDB's 2DSphere interface for this type of task.
-- For some reason executing this query over Lambda is extremely slow (~5-20s) compared to the raw execution (~1-2s), even from a warm start. I need to look into why this might be, this happens using both the Python & NodeJS APIs.
+- For some reason executing this query over Lambda is extremely slow (~5-20s) compared to the raw execution (~1-2s), even from a warm start. I need to look into why this might be, this happens using both the Python & NodeJS APIs. To compensate I've turned on caching in API Gateway.
